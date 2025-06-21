@@ -4,8 +4,14 @@ const connection = require("../Connection/connection");
 function show(req, res) {
   const id = parseInt(req.params.id);
   const aeroporto = req.params.aeroporto;
-  const data = ["passengers", "flights", "luggage", "plane"];
-  const ids = ["id_luggage", "flight_number", "id_passengers", "id_plane"];
+  const data = ["passengers", "flights", "luggage", "plane", "crew"];
+  const ids = [
+    "id_luggage",
+    "flight_number",
+    "id_passengers",
+    "id_plane",
+    "crew_id",
+  ];
 
   const i = data.indexOf(aeroporto);
   if (i === -1) return res.status(400).json({ error: "invalid data" });

@@ -1,6 +1,6 @@
 const express = require("express");
-const routerDestroy=express.Router();
-const destroy = require("../Controllers/Delete") 
-routerDestroy.delete("/:aeroporto/:id", destroy);
+const router=express.Router();
+const destroy = require("../Controllers/delete") 
+router.delete("/:aeroporto/:id", destroy);
 
-module.exports=routerDestroy
+module.exports=router

@@ -2,8 +2,14 @@
   function destroy(req, res) {
     const id = req.params.id;
     const aeroporto = req.params.aeroporto;
-    const data = ["passengers", "flights", "luggage", "plane"];
-    const ids = ["id_passengers", "flight_number", "id_luggage", "id_plane"];
+    const data = ["passengers", "flights", "luggage", "plane", "crew"];
+    const ids = [
+      "id_passengers",
+      "flight_number",
+      "id_luggage",
+      "id_plane",
+      "crew_id",
+    ];
 
     const i = data.indexOf(aeroporto);
     if (i === -1) return res.status(400).json({ error: "invalid data" });
@@ -14,3 +20,4 @@
     });
   }
   module.exports = destroy;
+  

@@ -5,14 +5,13 @@ app.use(express.json());
 
 const port = process.env.DB_PORT || 3000;
 require("dotenv").config();
-//! Connection al db 
-const connection = require("./Connection/connection");
+
 
 //! Routes
 //*Aeroport
-const router = require("./Routes/router") 
+const router = require("./Routes/indexAllData") 
 //*Single data 
-const routerSingleData = require("./Routes/RouteSingleData")
+const routerSingleData = require("./Routes/routeSingleData")
 //*delete 
 const routerDestroy=require("./Routes/destroy")
 

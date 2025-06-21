@@ -2,7 +2,7 @@ const connection = require("../Connection/connection");
 
 function index(req, res) {
   const aeroporto = req.params.aeroporto
-  const data = ["passengers", "flights", "luggage", "plane"];
+  const data = ["passengers", "flights", "luggage", "plane","crew"];
   if (!data.includes(aeroporto)) {
      return res.status(400).json({error:"invalid data"})
   }
