@@ -1,10 +1,10 @@
-// show.js
+
 const connection = require("../Connection/connection");
 
 function show(req, res) {
   const id = parseInt(req.params.id);
   const aeroporto = req.params.aeroporto;
-  const data = ["passengers", "flights", "luggage", "plane", "crew"];
+  const data = ["luggage", "flights", "passengers", "plane", "crew"];
   const ids = [
     "id_luggage",
     "flight_number",

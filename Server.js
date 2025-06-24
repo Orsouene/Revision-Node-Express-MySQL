@@ -2,9 +2,9 @@
 const express = require("express")
 const app = express()
 app.use(express.json());
+require("dotenv").config();
 
 const port = process.env.DB_PORT || 3000;
-require("dotenv").config();
 
 
 //! Routes
@@ -15,10 +15,12 @@ const routerSingleData = require("./Routes/routeSingleData")
 //*delete 
 const routerDestroy=require("./Routes/destroy")
 
+const postPassenger = require("./Routes/postPassenger");
 
 app.use("/aeroporto", router);
 app.use("/aeroporto", routerSingleData);
-app.use("/", routerDestroy);
+app.use("/aeroporto", routerDestroy);
+app.use("/aeroportos", postPassenger);
 
 
 //* Rotta default 
